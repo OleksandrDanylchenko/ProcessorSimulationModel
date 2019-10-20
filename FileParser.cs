@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
 namespace ProcessorSimulationModel
 {
-    internal class FileParcer
+    internal class FileParser
     {
         private string FilePath;
         public List<Command> commandsLs { get; private set; } = new List<Command>();
 
-        public FileParcer(string[] args)
+        public FileParser(string[] args)
         {
             if (args.Length == 1)
             {
