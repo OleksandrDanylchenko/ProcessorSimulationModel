@@ -9,8 +9,8 @@ namespace ProcessorSimulationModel
         {
             try
             {
-                FileParcer parcer = new FileParcer(args);
-                List<Command> commandsLs = parcer.commandsLs;
+                FileParcer parser = new FileParcer(args);
+                List<Command> commandsLs = parser.commandsLs;
 
                 Processor processor = new Processor();
                 foreach (Command com in commandsLs)
