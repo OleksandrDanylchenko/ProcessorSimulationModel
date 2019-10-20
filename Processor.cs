@@ -79,7 +79,7 @@ namespace ProcessorSimulationModel
 
         private void Shl(int registerIndex, int moveVal)
         {
-            if (moveVal > 0)
+            if (moveVal >= 0)
             {
                 string joinedBinaryStr = Converter.JoinBinaryString(_ProcCurState.R[registerIndex]);
                 StringBuilder modReg = new StringBuilder(joinedBinaryStr);
@@ -101,7 +101,7 @@ namespace ProcessorSimulationModel
 
         private void Shr(int registerIndex, int moveVal)
         {
-            if (moveVal > 0)
+            if (moveVal >= 0)
             {
                 string joinedBinaryStr = Converter.JoinBinaryString(_ProcCurState.R[registerIndex]);
                 StringBuilder modReg = new StringBuilder(joinedBinaryStr);
