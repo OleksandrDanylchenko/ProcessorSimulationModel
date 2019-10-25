@@ -1,7 +1,17 @@
-﻿namespace ProcessorSimulationModel
+namespace ProcessorSimulationModel
 {
     internal class ProcessorCurrentState
     {
+        public string Command { get; set; }
+        public string Ins { get; set; }
+
+        // registers
+        public string[] R { get; set; }
+
+        public int PC { get; set; } // commands counter
+        public int TC { get; set; } // tacts counter
+        public int PS { get; set; } // number sign
+
         public ProcessorCurrentState()
         {
             Command = string.Empty;
@@ -18,15 +28,5 @@
             TC = 1;
             PS = 0;
         }
-
-        public string Command { get; set; }
-        public string Ins { get; set; }
-
-        // registers
-        public string[] R { get; set; }
-
-        public int PC { get; set; } // commands counter
-        public int TC { get; set; } // tacts counter
-        public int PS { get; set; } // number sign
     }
 }
