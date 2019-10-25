@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace ProcessorSimulationModel
@@ -9,7 +9,7 @@ namespace ProcessorSimulationModel
         {
             try
             {
-                FileParcer parser = new FileParcer(args);
+                FileParser parser = new FileParser(args);
                 List<Command> commandsLs = parser.commandsLs;
 
                 Processor processor = new Processor();
@@ -20,11 +20,11 @@ namespace ProcessorSimulationModel
             }
             catch (ArgumentException ae)
             {
-                Console.WriteLine($"\n Exception: {ae.Message}");
+                Console.WriteLine($"\n ArgException: {ae.Message}");
             }
             catch (System.IO.IOException ioExp)
             {
-                Console.WriteLine($"\n {ioExp.Message}");
+                Console.WriteLine($"\n IOException:{ioExp.Message}");
             }
             finally
             {
