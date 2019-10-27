@@ -1,11 +1,19 @@
-﻿using System.Linq;
+using System;
+using System.Linq;
 
 namespace ProcessorSimulationModel
 {
     internal class Converter
     {
+        const uint MaxValue = 1048575;
+
         public static string GetBinaryString(int n)
         {
+            if (n > MaxValue)
+            {
+                throw new OverflowException("Cannot store such a big number");
+            }
+
             char[] b = new char[20]; // 20 bytes long adress
             int pos = 19;
             int i = 0;
