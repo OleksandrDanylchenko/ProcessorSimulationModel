@@ -22,6 +22,10 @@ namespace ProcessorSimulationModel
             {
                 Console.WriteLine($"\n ArgException: {ae.Message}");
             }
+            catch (OverflowException oe)
+            {
+                Console.WriteLine($"\n OverflowException: {oe.Message}");
+            }
             catch (System.IO.IOException ioExp)
             {
                 Console.WriteLine($"\n IOException:{ioExp.Message}");
